@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #436743, #466046);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 55px;
+    color: #c2b280;
+    margin-bottom: 45px;
+    font-family: 'Dancing Script';
+}
+
+/* INPUT SECTION */
+.add-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    background-color: #c2b280;
+}
+
+#taskInput {
+    flex: 2;
+}
+
+#dateInput {
+    flex: 1;
+}
+
+button {
+    background: #c2b280 ;
+    color: black ;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: medium;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* FILTER */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* LIST */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 45px;
+}
+
+li {
+    background: #c2b280;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.task-info input[type="text"] {
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    background-color: #c2b280;
+}
+
+.task-info input[type="date"] {
+    border: none;
+    font-size: 13px;
+    outline: none;
+    background-color: #c2b280;
+    
+}
+
+.completed input[type="text"] {
+    text-decoration: line-through;
+    color: black;
+}
+
+.completeBtn {
+    background: #436743;
+
+}
+
+.deleteBtn {
+   background: #ff6b6b;
+   
+}
+
+
+/* ========================= */
+/* 📱 RESPONSIVE MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .add-section {
+        flex-direction: column;
+    }
+
+    #taskInput,
+    #dateInput,
+    button {
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li div:last-child {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+}
