@@ -12,6 +12,17 @@ body {
     justify-content: center;
 }
 
+
+footer {
+    text-align: center;
+    color: #c2b280;
+    position: fixed;
+    bottom: 0;
+    margin-top: 10 px;
+
+   
+}
+
 .container {
     width: 100%;
     max-width: 700px;
@@ -171,4 +182,15 @@ li:hover {
         justify-content: space-between;
         margin-top: 10px;
     }
+
+    
+}
+
+
+footer {
+    text-align: center;
+    color: #c2b280;
+    position: fixed;
+    bottom: 0;
+
 }
